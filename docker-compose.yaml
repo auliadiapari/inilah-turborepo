@@ -1,0 +1,30 @@
+services:
+  docs:
+    container_name: monorepo-docs
+    build:
+      dockerfile: ./apps/docs/Dockerfile
+      args:
+        TURBO_TEAM: aulia-diaparis-project
+        TURBO_TOKEN: DIDH0CSSeNDtuvtqhJsRDxu1
+    restart: always
+    ports:
+      - 8080:3000
+    networks:
+      - monorepo
+
+  web:
+    container_name: monorepo-web
+    build:
+      dockerfile: ./apps/web/Dockerfile
+      args:
+        TURBO_TEAM: aulia-diaparis-project
+        TURBO_TOKEN: DIDH0CSSeNDtuvtqhJsRDxu1
+    restart: always
+    ports:
+      - 8090:3000
+    networks:
+      - monorepo
+
+networks:
+  monorepo:
+    driver: bridge
