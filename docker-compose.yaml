@@ -4,8 +4,8 @@ services:
     build:
       dockerfile: ./apps/docs/Dockerfile
       args:
-        TURBO_TEAM: aulia-diaparis-project
-        TURBO_TOKEN: DIDH0CSSeNDtuvtqhJsRDxu1
+        TURBO_TEAM: <TURBO_TEAM>
+        TURBO_TOKEN: <TURBO_TOKEN>
     restart: always
     ports:
       - 3001:3000
