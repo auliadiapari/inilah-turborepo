@@ -8,7 +8,7 @@ services:
         TURBO_TOKEN: DIDH0CSSeNDtuvtqhJsRDxu1
     restart: always
     ports:
-      - 8080:3000
+      - 3001:3000
     networks:
       - monorepo
 
@@ -17,11 +17,11 @@ services:
     build:
       dockerfile: ./apps/web/Dockerfile
       args:
-        TURBO_TEAM: aulia-diaparis-project
-        TURBO_TOKEN: DIDH0CSSeNDtuvtqhJsRDxu1
+        TURBO_TEAM: <TURBO_TEAM>
+        TURBO_TOKEN: <TURBO_TOKEN>
     restart: always
     ports:
-      - 8090:3000
+      - 3000:3000
     networks:
       - monorepo
 
